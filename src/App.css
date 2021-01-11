@@ -1,0 +1,75 @@
+
+@font-face {
+  font-family: 'Century-bold';
+  src: local('Century-bold'), url(./Frontend/assets/fonts/Century_Gothic/GOTHIC.TTF) format('truetype');
+}
+
+@font-face {
+  font-family: 'Helvetica-bold';
+  src: local('Helvetica-bold'), url(./Frontend/assets/fonts/Helvetica/HelveticaLTStd-BoldCond.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Helvetica-Roman';
+  src: local('Helvetica-Roman'), url(./Frontend/assets/fonts/Helvetica/HelveticaLTStd-Roman.otf) format('opentype');
+}
+
+
+/* Primary colors */
+
+:root {
+  --header-bg-blue: #324e88;
+  --darkblue: #1b2a49;
+  --lightblue:#91b2d0;
+  --regular-grey:#55595c;
+  --red: #a73036;
+  --green: #5cb85c;
+  --yellow: #f7c32a;
+  --white: #fff;
+  --body-bg: #f8f8f8;
+
+  --heading: 30px;
+  /* --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px; */
+  --font-century: 'Century-bold' ;
+  --font-helvetica: 'Helvetica-bold' ;
+
+  /* --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; */
+  --navilink-font: 25px; 
+  --box-shadow:0px 0px 7px #00000038;
+}
+ul, li, a{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+text-decoration: none;
+}
+body{
+  font-family: 'Helvetica-Roman';
+  font-size: 14px;
+  color: var(--regular-grey);
+  line-height: 19px;
+  background-color: var(--body-bg);
+}
+.btn-primary{
+  background-color: var(--yellow);
+  border: 0px none;
+}
+.btn-primary:hover{
+  background-color: var(--darkblue);
+  border: 0px none;
+}
+.whitebg{
+  background-color: var(--white);
+  /* background-color: #fff; */
+}
+.searcharea{
+  background-color: var(--darkblue);
+}
+
+h2{
+  /* font-family: var(--font-helvetica); */
+  font-family: var(--font-century);
+}

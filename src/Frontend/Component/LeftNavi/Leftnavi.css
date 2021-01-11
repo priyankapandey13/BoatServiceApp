@@ -1,0 +1,27 @@
+@import "../../../App.css";
+
+.leftnavi{
+    background-color: var(--darkblue);
+}
+
+
+
+.leftnavi li a{
+    font-family: var(--font-helvetica);
+    font-size: var(--navilink-font);
+    color: var(--lightblue);
+    text-decoration: none;
+    display: block;
+}
+
+.leftnavi li a:link, .leftnavi li a:visited{
+    background-color: var(--darkblue);
+    color: var(--lightblue);
+}
+.leftnavi li a:active, .leftnavi li a:hover, .leftnavi li a.active{
+    background-color: var(--lightblue);
+    color: var(--darkblue);
+}
+.sidebar-sticky{
+    height: calc(100vh - 48px);
+}

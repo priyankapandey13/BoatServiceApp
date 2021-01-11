@@ -1,0 +1,46 @@
+@import "../../../App.css";
+
+.navbar{
+    background-color: var(--header-bg-blue);
+    font-family: var(--font-century);
+    color: var(--white);
+}
+.navbar a{
+    color: var(--white) !important;
+}
+.navbar-nav{
+    flex-direction: row;
+}
+
+.navbar-toggler {
+    color: rgba(255,255,255,.5);
+    border-color: rgba(255,255,255,.1);
+    top: .25rem;
+right: 1rem;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.dropdown-menu{
+    right: 0 !important;
+    left: auto;
+}
+.header .navbar-nav img{
+    width: 1.6rem;
+    height: auto;
+    display: block;
+}
+.header a.nav-link:nth-child(1), .header a.nav-link:nth-child(2){
+    padding: 0px;
+    border-right: 1px solid #fff;
+}
+.header .nav-item .nav-link{
+    border: 0px solid !important;
+}
+.header a.dropdown-item{
+    color: var(--darkblue) !important;
+}
+.lefNaviControl{
+    display: block !important;
+    border: 0px none;
+}

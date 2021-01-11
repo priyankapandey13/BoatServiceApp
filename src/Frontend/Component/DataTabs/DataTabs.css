@@ -1,0 +1,31 @@
+@import "../../../App.css";
+
+.dataShowTable {
+  box-shadow: var(--box-shadow);
+  background-color: var(--white);
+  display: block;
+}
+
+.dataShowTable .nav-tabs {
+  display: flex;
+}
+
+.dataShowTable .nav-tabs .nav-item {
+  text-align: center;
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 0;
+  font-family: var(--Century-bold);
+  font-size: var(--navilink-font);
+  color: var(--regular-grey);
+  background-color: #f2f2f2;
+  padding: 0.9em 2em;
+  border-radius:0px ;
+}
+
+.nav-link.active{
+    background-color: #f9f8f8 !important;
+    border-bottom: 2px solid var(--lightblue) !important;
+    
+}
+

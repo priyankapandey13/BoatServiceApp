@@ -1,0 +1,8 @@
+.forgotpwd a{
+    color: var(--regular-grey);
+}
+    .termConditions a{
+        color: var(--regular-grey);
+        text-decoration: underline;
+        font-style: italic;
+    }

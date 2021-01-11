@@ -1,0 +1,41 @@
+.forgotpwd a{
+    color: var(--regular-grey);
+}
+    .termConditions a{
+        color: var(--regular-grey);
+        text-decoration: underline;
+        font-style: italic;
+    }
+
+
+
+    .loginpage{
+        height: calc(100vh);
+    }
+    .loginwrapper{
+        position: absolute;
+        top: 12vh;
+        margin: 0px auto;
+    }
+    .logincontainer{
+        background-color: var(--white);
+    }
+    
+    .loginwrapper h1{
+    background-color: var(--darkblue);
+    text-align: center;
+    vertical-align: middle;
+    }
+    
+    .loginwrapper h2{
+        text-align: center;
+        font-family: 'Helvetica-Roman';
+        font-size: var(--heading);
+        color: var(--regular-grey);
+        }
+        
+        .loginwrapper .form-control{
+            border:0px none ;
+            border-bottom: 1px solid #b7b7b7 !important;
+        }
+            
