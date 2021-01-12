@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import { Col, Container, Row } from "../../../../node_modules/react-bootstrap";
 import "./LoginForm.css";
-import Logo from "../../assets/images/logo/logo.png";
+import Logo from "../../assets/images/logo/logo.svg";
 import Slider from "../Slider/Slider";
 import PropTypes from "prop-types";
 import LoginForm from "./LoginForm";
@@ -12,7 +12,7 @@ function LoginFormContainer({
     handleInputChange,
     handleSubmit,
 }) {
-  const [LoginUserInfo, SetLoginUserInfo] = useState();
+  // const [LoginUserInfo, SetLoginUserInfo] = useState();
   // const [IsUserLogin, SetIsUserLogin] = useState(false);
 
 //   const [inputs, setInputs] = useState({
