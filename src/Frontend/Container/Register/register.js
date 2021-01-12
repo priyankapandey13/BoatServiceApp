@@ -1,7 +1,7 @@
 import { Col, Container, Row } from "../../../../node_modules/react-bootstrap";
 // import { useState } from "react";
 import "./register.css";
-import Logo from "../../assets/images/logo/logo.png";
+import Logo from "../../assets/images/logo/logo.svg";
 import Slider from "../../Component/Slider/Slider";
 import RegisterForm from "../../Component/RegisterForm/RegisterForm";
 // import ContentContainer from '../../Component/ContentContainer/ContentContainer';
