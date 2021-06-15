@@ -46,13 +46,15 @@ function Dashboard() {
 
             <Table striped bordered hover>
               <thead>
-                <td>User Id</td>
-                <td>Name</td>
-                <td>Email Id</td>
-                <td>Role Id</td>
-                <td>Phone Number</td>
-                <td>Zip Code</td>
-                <td>Created AT</td>
+                <tr>
+                <th>User Id</th>
+                <th>Name</th>
+                <th>Email Id</th>
+                <th>Role Id</th>
+                <th>Phone Number</th>
+                <th>Zip Code</th>
+                <th>Created AT</th>
+                </tr>
               </thead>
               <tbody>
                 {Showdata.map((item, index) => {

@@ -2,7 +2,7 @@
 "use strict";
 
 module.exports = (sequelize, DataTypes) => {
-  const Proposal = sequelize.define(
+  const proposal = sequelize.define(
     "proposal",
     {
       id: {
@@ -68,5 +68,5 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  return Proposal;
+  return proposal;
 };

@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const BoatSubType = sequelize.define(
+  const boatSubType = sequelize.define(
     "boat_subtype",
     {
       id: { type: DataTypes.INTEGER, primaryKey: true },
@@ -31,5 +31,5 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  return BoatSubType;
+  return boatSubType;
 };

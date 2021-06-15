@@ -23,7 +23,7 @@ import { useHistory } from "react-router-dom";
 function LoginForm() {
   const [inputs, setInputs] = useState({
     username: "",
-    profilepic: "",
+    // profilepic: "",
     email: "",
     password: "",
     phone: "",
@@ -41,7 +41,7 @@ function LoginForm() {
       const userdetails = {
         username: inputs.username,
         password: inputs.password,
-        profile_pic: inputs.profilepic,
+        // profile_pic: inputs.profilepic,
         email: inputs.email,
         phone_number: inputs.phone,
         address: inputs.address,
@@ -51,6 +51,7 @@ function LoginForm() {
         created_at: getCurrentDate(),
       };
       console.log(userdetails);
+      
       axios({
         url: "api/creatuser",
         method: "POST",
@@ -61,7 +62,7 @@ function LoginForm() {
           // alert(response);
           // UserRedirect();
           console.log(response);
-          History.push("/");
+          // History.push("/");
           alert("Congratulations!!\n You are succesfully registered\n Please log in for further action.");
 
 
@@ -72,13 +73,13 @@ function LoginForm() {
           //   History.push("/Home");
           // }
 
-          // if (response.data.accessToken) {
-          //   localStorage.setItem("user", JSON.stringify(response.data));
-          //   // History.push("/Dashboard");
+          if (response.data.accessToken) {
+            localStorage.setItem("user", JSON.stringify(response.data));
+            // History.push("/Dashboard");
 
-          //   console.log(response);
-          //   alert(response);
-          // }
+            console.log(response);
+            alert(response);
+          }
 
           return response.data;
         })
@@ -151,14 +152,14 @@ function LoginForm() {
     // <Row>
     <Container>
       <h2 className="pt-4 pb-3">Company Registeration</h2>
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit} encType="multipart/form-data">
         <Form.Group controlId="username">
           <Form.Control
             type="text"
             placeholder="Username"
             onChange={handleInputChange}
             value={inputs.name}
-            required
+            // // required
           />
         </Form.Group>
 
@@ -168,18 +169,18 @@ function LoginForm() {
             placeholder="Email"
             onChange={handleInputChange}
             value={inputs.email}
-            required
+            // required
           />
         </Form.Group>
 
-        <Form.Group controlId="profilepic">
           {/* <Form.Control type="file" placeholder="Profile Pic" onChange={handleInputChange} value={inputs.profile_pic}/> */}
+        {/* <Form.Group controlId="profilepic">
           <Form.File
             id="profilepic"
             onChange={handleInputChange}
             value={inputs.profilepic}
           />
-        </Form.Group>
+        </Form.Group> */}
 
         <Form.Group controlId="password">
           <Form.Control
@@ -187,7 +188,7 @@ function LoginForm() {
             placeholder="Password"
             onChange={handleInputChange}
             value={inputs.password}
-            required
+            // required
           />
         </Form.Group>
 
@@ -201,7 +202,7 @@ function LoginForm() {
                   as="select"
                   onChange={handleInputChange}
                   value={inputs.userrole}
-                  required
+                  // required
                 >
                   <option value="1">Customer</option>
                   <option value="2">Staff Member</option>
@@ -218,7 +219,7 @@ function LoginForm() {
                   placeholder="Input Phone no"
                   onChange={handleInputChange}
                   value={inputs.phone}
-                  required
+                  // required
                 />
               </Form.Group>
             </Col>
@@ -232,7 +233,7 @@ function LoginForm() {
                   placeholder="Zip code"
                   onChange={handleInputChange}
                   value={inputs.zipcode}
-                  required
+                  // required
                 />
               </Form.Group>
             </Col>
@@ -244,7 +245,7 @@ function LoginForm() {
                   placeholder="City"
                   onChange={handleInputChange}
                   value={inputs.city}
-                  required
+                  // required
                 />
               </Form.Group>
             </Col>
@@ -259,7 +260,7 @@ function LoginForm() {
             placeholder="Address"
             onChange={handleInputChange}
             value={inputs.address}
-            required
+            // required
           />
         </Form.Group>
 
@@ -285,10 +286,10 @@ function LoginForm() {
 }
 
 LoginForm.propTypes = {
-  // value: PropTypes.string.isRequired,
+  // value: PropTypes.string.is// required,
   // placeholder: PropTypes.string,
-  // onChange: PropTypes.func.isRequired,
-  // onSubmit: PropTypes.func.isRequired,
+  // onChange: PropTypes.func.is// required,
+  // onSubmit: PropTypes.func.is// required,
 };
 
 // LoginForm.defaultProps = {

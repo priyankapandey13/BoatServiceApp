@@ -2,7 +2,7 @@
 "use strict";
 
 module.exports = (sequelize, DataTypes) => {
-  const Job = sequelize.define(
+  const job = sequelize.define(
     "job",
     {
       id: { type: DataTypes.INTEGER, primaryKey: true },
@@ -92,5 +92,5 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  return Job;
+  return job;
 };
