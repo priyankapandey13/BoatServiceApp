@@ -3,32 +3,80 @@ const config = require("config");
 const bcrypt = require("bcrypt");
 const auth = require("../middleware/auth");
 const express = require("express");
+var multer = require('multer')
+const path = require('path');
 const Joi = require("joi");
-// const { validate } = require("joi");
+
 const router = express.Router();
+
 const db = require("../models");
-// const logger = require("./logger");
 
-router.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  res.header("Access-Control-Allow-Methods", "put, post, get, DELETE, OPTIONS");
+router.use(express.static('./public'));
 
-  next();
+// For profile pic part
+// const storage = multer.diskStorage({
+//   destination: function (req, file, cb) {
+//       cb(null, 'public/uploads')
+//   },
+//   filename: function (req, file, cb) {
+//       // You could rename the file name
+//       // cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+
+//       // You could use the original name
+//       cb(null, file.originalname)
+//   }
+// });
+
+// const upload = multer({storage: storage}).single('profilepic');
+// // const logger = require("./logger");
+
+
+// router.use(express.static(__dirname + '/public'));
+// router.use(express.static(process.cwd() + '/uploads'));
+// router.use('/fileuploads', express.static(process.cwd() + '/fileuploads'));
+
+
+
+// Submit image only , upload.single('file')
+
+router.post("/Register" , (req, res, next) => {
+  console.log("Look at me");
+ 
+  // upload(req, res, (err) => {
+  //   if(err){
+  //     res.render('index', {
+  //       msz: err
+  //     });
+  //   }
+  //   else{
+  //     console.log(req.file);
+  //     res.send('test');
+  //   }
+  // }
+  // )
+
+  return req.file ;
+
+  // const { username, profile_pic } = req.body;
+//   return res.json({
+//     imausername: req.body.username,
+//     profile_pic: req.body.profile_pic
+// });
 });
+
+// Submit image only
+
 
 // Create new user
 
 router.post("/creatuser", async (req, res, next) => {
+  // console.log(req.body.profile_pic);
   const validateUsers = (user) => {
     const schema = {
       active: Joi.number().integer().min(1).max(1).default(1),
       username: Joi.string().alphanum().min(5).max(50).required(),
       password: Joi.string().min(5).max(1024).required(),
-      profile_pic: Joi.string().min(5).max(100).required(),
+      // profile_pic: Joi.string().min(5).max(100).required(),
       email: Joi.string().min(5).max(60).required().email(),
       phone_number: Joi.string().min(6).max(11).required(),
       address: Joi.string().min(5).max(1024).required(),
@@ -41,8 +89,14 @@ router.post("/creatuser", async (req, res, next) => {
     return Joi.validate(user, schema);
   };
 
-  const { error } = validateUsers(req.body);
-  console.log(error);
+  // For image only
+
+
+
+// For image only
+
+  const { error } =  validateUsers(req.body);
+
 
   if (error) {
     res.status(400).send(error.details[0].message);
@@ -55,7 +109,7 @@ router.post("/creatuser", async (req, res, next) => {
   user = new db.user({
     active: req.body.active,
     name: req.body.username,
-    profile_pic: req.body.profile_pic,
+    // profile_pic: req.body.profile_pic,
     email: req.body.email,
     password: req.body.password,
     phone_number: req.body.phone_number,

@@ -2,7 +2,7 @@
 "use strict";
 
 module.exports = (sequelize, DataTypes) => {
-  const Boat = sequelize.define(
+  const boat = sequelize.define(
     "boat",
     {
       id: {
@@ -91,5 +91,5 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  return Boat;
+  return boat;
 };

@@ -2,7 +2,7 @@
 "use strict";
 
 module.exports = (sequelize, DataTypes) => {
-  const ServiceBoatType = sequelize.define(
+  const serviceBoatType = sequelize.define(
     "service_boat_type",
     {
       id: { type: DataTypes.INTEGER, primaryKey: true },
@@ -39,15 +39,15 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  ServiceBoatType.associate = function (models) {
-    ServiceBoatType.belongsTo(models.service, {
+  serviceBoatType.associate = function (models) {
+    serviceBoatType.belongsTo(models.service, {
       foreignKey: "service_id",
     });
 
-    ServiceBoatType.belongsTo(models.boat_type, {
+    serviceBoatType.belongsTo(models.boat_type, {
       foreignKey: "boat_type_id",
     });
   };
 
-  return ServiceBoatType;
+  return serviceBoatType;
 };

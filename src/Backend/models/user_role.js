@@ -2,7 +2,7 @@
 "use strict";
 
 module.exports = (sequelize, DataTypes) => {
-  const Userrole = sequelize.define(
+  const userrole = sequelize.define(
     "user_role",
     {
       id: { type: DataTypes.INTEGER, primaryKey: true },
@@ -26,5 +26,5 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  return Userrole;
+  return userrole;
 };

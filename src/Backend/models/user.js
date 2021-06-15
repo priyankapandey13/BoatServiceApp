@@ -2,14 +2,14 @@
 "use strict";
 
 module.exports = (sequelize, DataTypes) => {
-  const User = sequelize.define(
+  const user = sequelize.define(
     "user",
     {
       id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
 
       active: DataTypes.BOOLEAN,
 
-      profile_pic: DataTypes.STRING,
+      // profile_pic: DataTypes.STRING,
 
       name: DataTypes.STRING,
 
@@ -45,5 +45,5 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  return User;
+  return user;
 };

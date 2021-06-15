@@ -2,7 +2,7 @@
 "use strict";
 
 module.exports = (sequelize, DataTypes) => {
-  const BoatType = sequelize.define(
+  const boatType = sequelize.define(
     "boat_type",
     {
       id: { type: DataTypes.INTEGER, primaryKey: true },
@@ -27,5 +27,5 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  return BoatType;
+  return boatType;
 };
